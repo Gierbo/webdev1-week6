@@ -1,0 +1,145 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Light/Dark mode base */
+body {
+    background-color: #f4f4f4;
+    color: #222;
+    transition: background 0.4s, color 0.4s;
+}
+
+body.dark {
+    background-color: #1d1d1d;
+    color: #f1f1f1;
+}
+
+/* NAVIGATION */
+header {
+    background: #004aad;
+    padding: 1rem;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    color: #ffe600;
+    transition: 0.3s;
+}
+
+/* MOBILE MENU BUTTON */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(to right, #004aad, #0077ff);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.hero button:hover {
+    transform: scale(1.1);
+}
+
+/* SECTIONS */
+.section {
+    padding: 3rem 2rem;
+}
+
+/* Skills list */
+.skills-list {
+    list-style: square inside;
+    padding-left: 20px;
+}
+
+/* Projects table */
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.project-table th,
+.project-table td {
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+.project-table th {
+    background: #004aad;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: #004aad;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #003a8c;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
